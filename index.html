@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>クリックで音が鳴る</title>
+  <style>
+    img {
+      width: 300px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>写真をクリックして音を鳴らしてみよう！</h2>
+
+<!-- 写真 -->
+<img src="sh.png" alt="クリックしてね" onclick="playSound()">
+
+<!-- 音声ファイル（MP3） -->
+<audio id="myAudio" src="a.mp3"></audio>
+
+<script>
+function playSound() {
+  const audio = document.getElementById("myAudio");
+  audio.currentTime = 0;  // 最初から再生
+  audio.play();
+}
+</script>
+
+</body>
+</html>
